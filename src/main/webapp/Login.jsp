@@ -46,7 +46,7 @@
     </div>
     <div class="buttonLogin text-center my-5">
         <button
-                name=""
+                name="submit button"
                 id="loginButton"
                 class="btn btn-primary"
                 type="button"

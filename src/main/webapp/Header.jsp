@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page errorPage="error.jsp" %>
 <html>
 <head>
     <!-- Bootstrap CSS v5.2.1 -->
@@ -28,10 +29,15 @@
     <!-- Header -->
     <header>
         <div class="containerS">
-            <div class="logo">
-                <h1>Auth Apps</h1>
+            <div class="logo" style="cursor: pointer" onclick="handleOnClick()">
+                <h1 >Auth Apps</h1>
             </div>
         </div>
+        <script>
+            function handleOnClick() {
+                window.location.href = "Home.jsp";
+            }
+        </script>
     </header>
 
 <%@include file="Footer.jsp"%>

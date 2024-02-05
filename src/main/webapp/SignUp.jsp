@@ -16,8 +16,8 @@
 <h2 class="text-center">Register</h2>
 <section class="body">
     <form
-            action="https://script.google.com/macros/s/AKfycbwKvKhSzeGcp3rhjTh9cMWBTGHO9V1b43fd21gsNNnjQybonApBX2qLaAmpdz-A-W7M9w/exec?action=Register"
-            method="post"
+            action="RegisterServlet"
+            method="POST"
             id="formQL"
     >
         <div class="mb-3 mx-5">
@@ -45,7 +45,7 @@
         <div class="mb-3 mx-5">
             <label for="passwordInput" class="form-label">Password</label>
             <input
-                    type="text"
+                    type="password"
                     class="form-control"
                     name="password"
                     id="passwordInput"
@@ -64,9 +64,14 @@
                     placeholder="email"
             />
         </div>
-        <div class="signUp text-center">
-            <a href="./index.html" class="signUpText">Login here</a>
-        </div>
+        <% if(request.getAttribute("message") != null) { %>
+            <div class="alert alert-danger" role="alert">
+                <%= request.getAttribute("message") %>
+            </div>
+        <% } %>
+                <div class="signUp text-center">
+                    <a href="./index.html" class="signUpText">Login here</a>
+                </div>
         <div class="buttonLogin text-center my-5">
             <input
                     name=""

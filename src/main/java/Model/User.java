@@ -7,12 +7,12 @@ public class User implements Serializable {
     private String username;
     private String email;
     private String firstname;
-    private boolean isFingerprintRegistered;
+    private int isFingerprintRegistered;
 
     public User() {
     }
 
-    public User(int id, String username, String email, String firstname, boolean isFingerprintRegistered) {
+    public User(int id, String username, String email, String firstname, int isFingerprintRegistered) {
         this.id = id;
         this.username = username;
         this.email = email;
@@ -53,11 +53,11 @@ public class User implements Serializable {
         this.firstname = firstname;
     }
 
-    public boolean isFingerprintRegistered() {
+    public int isFingerprintRegistered() {
         return isFingerprintRegistered;
     }
 
-    public void setFingerprintRegistered(boolean fingerprintRegistered) {
+    public void setFingerprintRegistered(int fingerprintRegistered) {
         isFingerprintRegistered = fingerprintRegistered;
     }
 }
