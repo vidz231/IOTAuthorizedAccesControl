@@ -25,6 +25,7 @@ public class AppScriptRequest {
      * @param password The password of the user.
      * @return A User object if the authentication is successful, null otherwise.
      * @throws Exception If an error occurs during the process.
+     * @author Le Trung Vi
      */
     public static User authenticate(String username,String password) throws Exception {
         URL url = new URL(APPSCRIPT_URL);
@@ -94,6 +95,7 @@ public class AppScriptRequest {
      * @param password The password of the user.
      * @return An integer indicating the result of the registration (1 for success, 0 for failure).
      * @throws Exception If an error occurs during the process.
+     * @author Le Trung Vi
      */
     public static int registerUser(User user, String password) throws Exception{
         URL url = new URL(APPSCRIPT_URL);
@@ -152,7 +154,18 @@ public class AppScriptRequest {
     }
 
 
-
+    /**
+     * This method is used to register a user's fingerprint.
+     * It sends a POST request to the APPSCRIPT_URL with the fingerprint template and user ID as parameters.
+     * If the response status is "success", it returns 1, indicating that the registration was successful.
+     * If the response status is not "success" or the response is null or empty, it returns 0, indicating that the registration failed.
+     *
+     * @param templateObject A JsonObject representing the fingerprint template.
+     * @param id The ID of the user.
+     * @return An integer indicating the result of the registration (1 for success, 0 for failure).
+     * @throws Exception If an error occurs during the process.
+     * @author Le Trung Vi
+     */
 
     public static int registerFinger(JsonObject templateObject,int id) throws Exception{
         URL url = new URL(APPSCRIPT_URL);

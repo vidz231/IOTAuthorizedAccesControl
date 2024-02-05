@@ -11,7 +11,15 @@ import java.net.URL;
 public class ArduinoRequestHandle {
     private static final String DOMAIN = "http://192.168.1.11:";
     private static final String PORT = "80/";
-
+    /**
+     * Sends a registration request to the server.
+     *
+     * @param action The action to be performed on the server.
+     * @param id The id of the user to be registered.
+     * @return A JsonObject representing the server's response.
+     *
+     * @author Le Trung Vi
+     */
     public static JsonObject sendRegister(String action, int id) {
         JsonObject jsonResponse = null;
         try {
